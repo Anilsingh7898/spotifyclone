@@ -1,0 +1,226 @@
+#section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  // overflow-x: hidden;
+
+  .part1 {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100vh;
+    width: 200px;
+    // padding: 1rem;
+
+    img {
+      margin: 1.5rem;
+      width: 8rem;
+      height: 2.5rem;
+    }
+    .d1 {
+      display: flex;
+      align-items: center;
+      grid-gap: 2rem;
+      flex-direction: column;
+
+      a {
+        color: rgb(350, 350, 350);
+
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        transition: all 0.2s;
+
+        &:hover {
+          color: green;
+          transform: translateY(-3px);
+        }
+      }
+    }
+    .d2 {
+      display: flex;
+      align-items: center;
+      grid-gap: 2rem;
+      flex-direction: column;
+
+      a {
+        color: rgb(350, 350, 350);
+
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        transition: all 0.2s;
+        &:hover {
+          color: green;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+  .part2 {
+    background-color: rgb(37, 37, 37);
+    height: 100vh;
+    width: 100vw;
+
+    overflow: scroll;
+
+    nav {
+      position: absolute;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      grid-gap: 2rem;
+      height: 4.5rem;
+      width: 85.5vw;
+
+      background-color: rgb(15, 15, 15);
+      z-index: 10;
+
+      img {
+        display: none;
+        margin: 1.5rem;
+        width: 8rem;
+        height: 2.5rem;
+        position: absolute;
+        left: 0;
+      }
+
+      a {
+        color: rgb(160, 160, 160);
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        transition: all 0.2s;
+
+        &:hover {
+          transition: all 0.2s;
+          color: white;
+          transform: translateY(-3px);
+        }
+      }
+
+      .btn2 {
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+        background-color: rgb(248, 247, 247);
+        width: 100px;
+        height: 3.2rem;
+        padding: 20px;
+        border-radius: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        opacity: 0.5px;
+
+        &:hover {
+          color: orangered;
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    .h1 {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .cards {
+      display: flex;
+      grid-gap: 0.4rem;
+      // overflow: scroll;
+    }
+    .card1 {
+      padding: 1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      transition: all 0.3s;
+      opacity: 0.5px;
+      width: 14rem;
+      height: 17rem;
+      overflow: hidden;
+
+      &:hover {
+        transition: all 0.5s;
+        background-color: #181818;
+        transform: translateY(-5px);
+      }
+
+      .container {
+        font-size: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        padding: 2px 16px;
+        color: white;
+      }
+    }
+    .footer {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .part1 {
+      display: none;
+    }
+    .part2 {
+      nav {
+        position: fixed;
+        width: 100%;
+
+        img {
+          display: block;
+        }
+      }
+
+      .cards {
+        width: 70rem;
+        height: 13rem;
+
+        .card1 {
+          width: 15rem;
+          height: 12rem;
+          overflow: scroll;
+        }
+
+        img {
+          width: 10rem;
+          // height: 8.5rem;
+        }
+
+        h4 {
+          display: none;
+        }
+      }
+      .footer {
+        display: block;
+
+        nav {
+          position: fixed;
+          bottom: 0.2px;
+          width: 100%;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          grid-gap: 10px;
+
+          a {
+            img {
+              position: relative;
+              height: 2.5rem;
+              width: 2.5rem;
+            }
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
